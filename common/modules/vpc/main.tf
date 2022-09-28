@@ -31,7 +31,7 @@ resource "oci_core_security_list" "public_subnet_security_list" {
         }
     
     dynamic "ingress_security_rules" {
-        for_each = var.cs_allows
+        for_each = var.ssh_allows
         content {
             source = ingress_security_rules.value
             protocol = "6"
